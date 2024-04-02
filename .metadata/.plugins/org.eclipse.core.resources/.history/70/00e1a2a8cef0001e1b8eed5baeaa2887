@@ -1,0 +1,50 @@
+package homework1;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class HW4 {
+	public static int countAverage(int[] score) {
+		int avg = 0;
+		for(int element : score) 
+			avg = avg + element;
+		
+		avg = avg/score.length;
+		return avg;
+	}
+	
+	public static int findMax(int[] score) {
+		int max = -999999999;
+		for(int element : score) {
+			if(max < element)
+				max = element;
+		}
+		return max;
+	}
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("# This is the fourth question #");
+		int score[] = new int[10];
+		
+		while(true){
+			try{
+				for(int i = 1 ; i <= score.length ; i++) {
+					System.out.print("The "+ i +" number:");
+					score[i-1] = scanner.nextInt();
+				}
+				scanner.close();
+				break;
+			} catch(InputMismatchException e){
+				System.out.println("Please make sure the format is right!");
+				scanner.next(); // clear the error input
+			}
+		}
+		
+		int max = findMax(score);
+		int avg = countAverage(score);
+		
+		System.out.println("The highest score: "+max);
+		System.out.println("The average score: "+avg);
+		
+		return;
+	}
+}

@@ -1,0 +1,12 @@
+package homework1;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class HW4 {
+	public static void main(String[] args){
+		System.out.println("# This is the fourth question #");
+
+
+		return;
+	}
+}

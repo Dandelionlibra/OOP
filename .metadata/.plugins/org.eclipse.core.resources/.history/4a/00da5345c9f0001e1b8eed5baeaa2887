@@ -1,0 +1,32 @@
+package homework1;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class HW3 {
+
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		int num;
+		
+		System.out.println("# This is the third question #");
+		while(true){
+			try{
+				System.out.print("Please enter the number:");
+				num = scanner.nextInt();
+				scanner.close();
+				break;
+			} catch(InputMismatchException e){
+				System.out.println("Please make sure the format is right!");
+				scanner.next(); // clear the error input
+			}
+		}
+		
+		if(judge3(num) && judge5(num) && judge7(num))
+			System.out.println("The input number "+num+" can divisible by 3, 5, or 7!");
+		else
+			System.out.println("The input number "+num+" can't divisible by 3, 5, or 7!");
+		
+		return;
+	}
+}

@@ -1,0 +1,14 @@
+package homework1;
+
+public class homework1_1 {
+	public static void main(String[] args) {
+		System.out.println("# This is the first question #");
+		System.out.println("Please enter the first number:");
+		int num1 = scanner.nextInt();
+		scanner.close();
+		System.out.println("Please enter the second number:");
+		int num2 = scanner.nextInt();
+		scanner.close();
+		
+	}
+}
