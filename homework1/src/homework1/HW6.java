@@ -25,7 +25,7 @@ public class HW6 {
 		
 		while(true){
 			try{
-				System.out.print("Please enter the number:");
+				System.out.print("Please enter the number(int):");
 				N = scanner.nextInt();
 				scanner.close();
 				break;

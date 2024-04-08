@@ -23,7 +23,7 @@ public class HW5 {
 		
 		while(true){
 			try{
-				System.out.print("Please enter the number:");
+				System.out.print("Please enter the number(int):");
 				num = scanner.nextInt();
 				scanner.close();
 				break;

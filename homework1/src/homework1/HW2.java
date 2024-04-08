@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class HW2 {
 	private static boolean judge3(int num){
-		if(num%3 == 0)
+		if(num%3 == 0)// check whether it is divisible by 3
 			return true;
 		return false;
 	}
 	private static boolean judge5(int num){
-		if(num%5 == 0)
+		if(num%5 == 0)// check whether it is divisible by 5
 			return true;
 		return false;
 	}
 	private static boolean judge7(int num){
-		if(num%5 == 0)
+		if(num%7 == 0)// check whether it is divisible by 7
 			return true;
 		return false;
 	}
@@ -27,7 +27,7 @@ public class HW2 {
 		
 		while(true){
 			try{
-				System.out.print("Please enter the number:");
+				System.out.print("Please enter the number(int):");
 				num = scanner.nextInt();
 				scanner.close();
 				break;

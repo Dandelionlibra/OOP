@@ -22,10 +22,10 @@ public class HW1 {
 		
 		while(true){
 			try{
-				System.out.print("Please enter the first number:");
+				System.out.print("Please enter the first number(int):");
 				objA.val = scanner.nextInt();
 				
-				System.out.print("Please enter the second number:");
+				System.out.print("Please enter the second number(int):");
 				objB.val = scanner.nextInt();
 				scanner.close();
 				break;

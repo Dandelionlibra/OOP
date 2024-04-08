@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HW4 {
-	public static double countAverage(int[] score) {
+	public static double countAverage(double[] score) {
 		double avg = 0;
 		for(double element : score)
 			avg = avg + element; // add all scores one by one
@@ -12,9 +12,9 @@ public class HW4 {
 		return avg;
 	}
 	
-	public static int findMax(int[] score) {
-		int max = -999999999; // setting minimum value
-		for(int element : score) {
+	public static double findMax(double[] score) {
+		double max = -999999999; // setting minimum value
+		for(double element : score) {
 			if(max < element) // if element > current max, update maximum value
 				max = element;
 		}
@@ -24,13 +24,13 @@ public class HW4 {
 		System.out.println("# This is the fourth question #");
 		
 		Scanner scanner = new Scanner(System.in);
-		int score[] = new int[10];
+		double score[] = new double[10];
 		
 		while(true){
 			try{
 				for(int i = 1 ; i <= score.length ; i++) {
 					System.out.print("The "+ i +" number:");
-					score[i-1] = scanner.nextInt();
+					score[i-1] = scanner.nextDouble();
 				}
 				scanner.close();
 				break;
@@ -40,11 +40,11 @@ public class HW4 {
 			}
 		}
 		
-		int max = findMax(score); // find the max score in score[10]
+		double max = findMax(score); // find the max score in score[10]
 		double avg = countAverage(score); // count the average
 		
 		System.out.println("The highest score: "+max);
-		System.out.println("The average score: "+avg);
+		System.out.println("The average score: "+avg); // String.format("%2f", args)
 		
 		return;
 	}
