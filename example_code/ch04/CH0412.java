@@ -1,14 +1,13 @@
-package ch04;
+// package ch04;
 
 public class CH0412 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
-		int n, result = 1, maxLevel; // 變數宣告
-        java.util.Scanner sc =
-                new java.util.Scanner(System.in);
-        System.out.print("請輸入階層數=> ");
-        maxLevel = sc.nextInt(); // 取得最大階層數
+		// TODO 嚙諛動莎蕭嚙談迎蕭嚙踝蕭k Stub
+		int n, result = 1, maxLevel; // 嚙豌數宣告
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+        System.out.print("=> ");
+        maxLevel = Interger.parseInt(sc.nextInt()); // 嚙踝蕭嚙緻嚙諒大嚙踝蕭嚙篁嚙踝蕭
         for (n = 1; n <= maxLevel; n++ ) {
             result = result * n;
         }

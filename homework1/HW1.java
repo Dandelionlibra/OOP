@@ -28,7 +28,11 @@ public class HW1 {
 				objB.val = scanner.nextInt();
 				scanner.close();
 				break;
-			} catch(InputMismatchException e){
+			} catch(InputMismatchException e){ // catch input mismatch
+				System.out.println("Please make sure the format is right!");
+				scanner.next(); // clear the error input
+			}
+			catch(Exception e){ // catch all exceptions
 				System.out.println("Please make sure the format is right!");
 				scanner.next(); // clear the error input
 			}

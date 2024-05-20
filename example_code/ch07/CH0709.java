@@ -1,6 +1,6 @@
-package ch07;
+// package ch07;
 
-class CClassTwo         //¥DÃþ§O
+class CClassTwo         //ï¿½Dï¿½ï¿½ï¿½O
 {
 	public int Var;
     public static int sVar;
@@ -9,24 +9,26 @@ class CClassTwo         //¥DÃþ§O
     	Var++;
         System.out.println(str + "'s Var=" + Var);        
     }
-    public static void add()        //Ãþ§O¤èªk
+    public static void add()        //ï¿½ï¿½ï¿½Oï¿½ï¿½k
     {
-        //Var++;         //¿ù»~,¦]¬°Ãþ§O¤èªk¤º¤£¥i¥H¦s¨ú¹êÅéÅÜ¼Æ
+        //Var++;         //ï¿½ï¿½ï¿½~,ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½kï¿½ï¿½ï¿½ï¿½ï¿½iï¿½Hï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼ï¿½
         sVar++;
         System.out.println("CClassTwo class sVar=" + sVar);  
     }
 }
 public class CH0709 {
 	public static void main(String[] args) {
-		// TODO ¦Û°Ê²£¥Íªº¤èªk Stub
+		// TODO ï¿½Û°Ê²ï¿½ï¿½Íªï¿½ï¿½ï¿½k Stub
 		CClassTwo x1 = new CClassTwo();
 		CClassTwo x2 = new CClassTwo(); 
 		x1.Var = 3;
 		x2.Var = 10;
-		x1.sVar = 5;        //¨Ï¥Îª«¥ó¦s¨úÃþ§OÅÜ¼Æ
-		x2.sVar = 15;        //¨Ï¥Îª«¥ó¦s¨úÃþ§OÅÜ¼Æ
-		x1.add();           //¨Ï¥Îª«¥ó°õ¦æÃþ§O¤èªk
-		x2.add();           //¨Ï¥Îª«¥ó°õ¦æÃþ§O¤èªk  
+		x1.sVar = 5;        //ï¿½Ï¥Îªï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ü¼ï¿½
+		x2.sVar = 15;        //ï¿½Ï¥Îªï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½Ü¼ï¿½
+		x1.add();           //ï¿½Ï¥Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½k
+		x2.add();           //ï¿½Ï¥Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½k  
+		CClassTwo.add();           //ï¿½Ï¥Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½k  
+
 		x1.show("X1");
 		x2.show("x2");
 	}

@@ -1,6 +1,14 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
+/***************************************************************************************
+/*  InfoSorter : used to sort the students and teachers by name and age.
+/*  The class contains four methods:
+/*  1. showInfoByName(Student[] student): Sort students by name and print the result.
+/*  2. showInfoByName(Teacher[] teacher): Sort teachers by name and print the result.
+/*  3. showInfoByAge(Student[] student): Sort students by age and print the result.
+/*  4. showInfoByAge(Teacher[] teacher): Sort teachers by age and print the result.
+/***************************************************************************************/
 class InfoSorter {
 	public static void showInfoByName(Student[] student) {
 		// Bubble sort to sort students by name
@@ -71,93 +79,99 @@ class InfoSorter {
 	}
     
 }
-class Student {
-	private String name;
-	private int birthYear;
-	private int studentID;
-	private int grade;
 
-	// constructor
+/***************************************************************************************
+/*  Student class is used to store the information of students.
+/*  The class contains four attributes: name、birthYear、studentID、grade
+/*
+/*  The class contains two constructors.
+/*
+/*  The class contains three methods:
+/*  1. getName(): return the name of the student.    -> so that we can sort by name
+/*  2. getBirthYear(): return the birth year of the student.    -> so that we can sort by age
+/*  3. toString(): override the toString method to print the information of the student.
+/***************************************************************************************/
+class Student {
+	private String name; // name of the student
+	private int birthYear; // birth year of the student
+	private int studentID; // ID of the student
+	private int grade; // grade of the student
+
+	// default constructor
 	Student() {
 		name = "None";
 		birthYear = 0;
 		studentID = 0;
 		grade = 0;
 	}
+	// constructor with parameters
 	Student(String name, int birthYear, int studentID, int grade) {
 		this.name = name;
 		this.birthYear = birthYear;
 		this.studentID = studentID;
 		this.grade = grade;
 	}
-
-	/*public void setName(String name) {
-		this.name = name;
-	}
-	public void setBirthYear(int birthYear) {
-		this.birthYear = birthYear;
-	}
-	public void setStudentID(int studentID) {
-		this.studentID = studentID;
-	}
-	public void setGrade(int grade) {
-		this.grade = grade;
-	}*/
 	public String getName() {
 		return name;
 	}
 	public int getBirthYear() {
 		return birthYear;
 	}
-	//getters, and setters
+	// override toString method to print the information of the student
 	@Override public String toString() {
 		return "name: " + name + ", birthYear: " + birthYear + ", studentID: " + studentID + ", grade: " + grade;
 	}
 }
 
+/***************************************************************************************
+/*  Teacher class is used to store the information of teachers.
+/*  The class contains three attributes:name、birthYear、subject
+/*
+/*  The class contains two constructors:
+/*
+/*  The class contains three methods:
+/*  1. getName(): return the name of the teacher.   -> so that we can sort by name
+/*  2. getBirthYear(): return the birth year of the teacher.   -> so that we can sort by age
+/*  3. toString(): override the toString method to print the information of the teacher.
+/***************************************************************************************/
 class Teacher {
-	private String name;
-	private int birthYear;
-	private String subject;
+	private String name; // name of the teacher
+	private int birthYear; // birth year of the teacher
+	private String subject; // subject of the teacher
 
-	// constructor
+	// default constructor
 	Teacher() {
 		name = "None";
 		birthYear = 0;
 		subject = "None";
 	}
+	// constructor with parameters
 	Teacher(String name, int birthYear, String subject) {
 		this.name = name;
 		this.birthYear = birthYear;
 		this.subject = subject;
 	}
-	/*public void setName(String name) {
-		this.name = name;
-	}
-	public void setBirthYear(int birthYear) {
-		this.birthYear = birthYear;
-	}
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}*/
 	public String getName() {
 		return name;
 	}
 	public int getBirthYear() {
 		return birthYear;
 	}
-	//, getters, and setters
+	// override toString method to print the information of the teacher
 	@Override public String toString() {
 		return "name: " + name + ", birthYear: " + birthYear + ", subject: " + subject;
 	}
 }
 
+/***************************************************************************************
+/*  HW2_2 class is used to test the Student and Teacher classes.
+/*  main(String[] args): 1. create students and teachers, test the operations of the Student and Teacher classes.
+/*  					 2. sort students and teachers by name and age, and print the sorted result.
+/***************************************************************************************/
 public class HW2_2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-		int num = 10;
-		// System.out.println("Please enter the student number: ");
-		// num = scanner.nextInt();
+		int num = 10; // number of students and teachers
 
 		// initialize the array of students and teachers
 		Student[] students = new Student[num];
@@ -182,24 +196,28 @@ public class HW2_2 {
 		}
 
 		// Question3, print students name
+		// test the Student class toString() method
 		System.out.println("\033[1;31m\nStudent info: \033[0m");
 		for (Student student : students) {
 			System.out.println(student);
 		}
 
 		// Question3, print teachers name
+		// test the Teacher class toString() method
 		System.out.println("\033[1;31m\nTeacher info: \033[0m");
 		for (Teacher teacher : teachers) {
 			System.out.println(teacher);
 		}
 	
 		// Question4, Sort students by name
+		// test the sort result
 		System.out.println("\033[1;31m\nSort students by name: \033[0m");
 		InfoSorter.showInfoByName(students);
 		System.out.println("\033[1;31m\nSort teachers by name: \033[0m");
 		InfoSorter.showInfoByName(teachers);
         
 		// Question5, Sort students by age
+		// test the sort result
         System.out.println("\033[1;31m\nSort students by age: \033[0m");
 		InfoSorter.showInfoByAge(students);
 		System.out.println("\033[1;31m\nSort teachers by age: \033[0m");
@@ -210,6 +228,7 @@ public class HW2_2 {
 }
 
 
+// test data
 /*
 John Smith, 2002, 2024001, 2
 Emily Johnson, 2003, 2024002, 1
